@@ -1,0 +1,23 @@
+.card{
+    display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        height: 100%;
+    
+
+
+}
+
+.btn{
+    height: 40px; 
+        width: 100px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+      
+        border-radius: 5px;
+     
+        cursor: pointer;
+        
+    
+}

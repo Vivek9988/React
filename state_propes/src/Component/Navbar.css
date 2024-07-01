@@ -1,0 +1,21 @@
+body{
+    background-color:black;
+    color: white;
+}
+.vivek{
+    border: 1px solid green;
+    border-radius: 10px;
+    display: flex;
+    margin: 10px;
+    background-color: rgb(98, 129, 239);
+}
+li{
+    margin: 10px;
+}
+.vivek1{
+    margin-left: 40%;
+    /* text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center; */
+}
