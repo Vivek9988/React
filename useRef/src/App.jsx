@@ -1,46 +1,50 @@
-import { useState,useEffect, } from 'react'
+import { useState,useEffect, useRef} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-let a =  0;
-  useEffect(()=>{
-     a =a+1;
+      const a= useRef(0);
+      const ref = useRef()
 
-    console.log(`hello i am endering ${a}`)
-  },[]);
+  let counter = 15
+
+  const addValue = () => {            // it will persist the value
+    // console.log("value addaded", Math.random());
+    // counter = counter + 1;
+    // console.log(counter)
+  }
+
+  useEffect(()=>{                 // so useeffect will not persist the value but the function will
+    //  a.current =a.current+1;
+
+    // console.log(`hello i am endering ${a.current}`);
+    // ref.current.style.backgroundColor="red"
+    counter = counter + 1;
+    console.log(counter)
+
+  });
    
-   const button1 = ()=>{
-    a =a+1;
-    console.log(a)
-   }
+  //  const button1 = ()=>{
+  //   a =a+1;
+  //   console.log(a)
+  //  }
 
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+      
+     
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button ref={ref} onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <button onClick={button1}>{a}</button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        
+        {/* <button onClick={button1}>{a}</button> */}
+        <button onClick={addValue}></button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+     
     </>
   )
 }

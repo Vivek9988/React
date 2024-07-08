@@ -1,27 +1,11 @@
-import {useEffect, useState } from 'react'
+import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0);
-  
-  // run on every render
-  useEffect(() => {
-    alert("hey bhai how are you")
-  })
-
-  // run on only first render
-  useEffect(() => {
-    alert("hey bhai how are you")
-  }, [])
-
-  // run on certain value
-  
-  useEffect(() => {
-    alert("hey bhai how are you")
-  }, [count])
-
+  const [count, setCount] = useState(0)
+  const [showbtn, setshowbtn] = useState(false)
 
   return (
     <>
@@ -34,7 +18,9 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      {showbtn ? <button>i am a button</button> : "thenga"}
       <div className="card">
+      
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
