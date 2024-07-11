@@ -5,18 +5,21 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0);
+
+  
+  
   
   // run on every render
-  useEffect(() => {
-    alert("hey bhai how are you")
-  })
+  // useEffect(() => {
+  //   alert("hey bhai how are you")
+  // })
 
   // run on only first render
-  useEffect(() => {
-    alert("hey bhai how are you")
-  }, [])
+  // useEffect(() => {
+  //   alert("hey bhai how are you")
+  // }, [])
 
-  // run on certain value
+  // // run on certain value
   
   useEffect(() => {
     alert("hey bhai how are you")

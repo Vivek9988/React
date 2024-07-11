@@ -1,13 +1,13 @@
 import React from 'react'
 import Button from './Button'
 
-const Navbar = ({vivek}) => {
+const Navbar = () => {
     return (
         <>
        <div>
         Navbar
      </div>
-     <Button vidhi={vivek}/>
+     <Button />
         </>
     )
 }

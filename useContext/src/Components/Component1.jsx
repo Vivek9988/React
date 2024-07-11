@@ -1,9 +1,11 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import { counterContext } from '../Context/Context'
 
-const Component1 = ({goli}) => {
+const Component1 = () => {
+  const hello=useContext(counterContext)
   return (
     <div>
-      Component1--- {goli}
+      Component1 --{hello}
     </div>
   )
 }
