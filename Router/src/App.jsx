@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css'
 import Navbar from './Component/NAvbar'
 
+
 function App() {
   const [count, setCount] = useState(0)
   const router = createBrowserRouter([
@@ -19,7 +20,7 @@ function App() {
       element:<><Navbar/><Login/></>
     },
     {
-      path:"/https://www.google.com/",
+      path:"/about",
       element: <><Navbar /><About/></>
     },
     {

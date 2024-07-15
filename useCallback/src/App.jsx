@@ -13,20 +13,20 @@ function App() {
   //   return "another"
   // }
   
-  const getAdjective= useCallback(() => {
-    console.log("hello")
-    return "another"
+  // const getAdjective= useCallback(() => {
+  //   console.log("hello")
+  //   return "another"
    
     
-  }, [])
-  getAdjective()
+  // }, [])
+  //getAdjective()
 
   
 
   return (
     <>
       <div>
-        <Navbar adjective={"good"} getAdjective={getAdjective} ></Navbar>
+        <Navbar adjective={"good"}  ></Navbar>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>

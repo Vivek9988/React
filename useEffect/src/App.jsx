@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0);
+  const [xyx, setxyx] = useState(0)
 
   
   
@@ -22,12 +23,30 @@ function App() {
   // // run on certain value
   
   useEffect(() => {
-    alert("hey bhai how are you")
+    //alert("hey bhai how are you");
+    const vivek=()=>{
+      console.log("vivek")
+      console.log("shenha")
+      console.log("vaibhav")
+    }
+    vivek()
+  }, [xyx])
+
+  useEffect(() => {
+    //alert("hey bhai how are you");
+    const vivek = () => {
+      console.log("vivek")
+      console.log("vidhi")
+      console.log("sweta")
+    }
+    vivek()
   }, [count])
+
 
 
   return (
     <>
+    <button onClick={()=>setxyx((xyz)=>xyz+1)}>hello bhai</button>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

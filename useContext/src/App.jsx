@@ -7,10 +7,11 @@ import {counterContext} from './Context/Context'
 
 function App() {
   const [count, setCount] = useState(0)
+  
 
   return (
     <>
-    <counterContext.Provider value={count} vivek={12}>
+    <counterContext.Provider value={count}>
     <Navbar/>
       <div>
         <a href="https://vitejs.dev" target="_blank">
