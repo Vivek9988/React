@@ -8,8 +8,8 @@ function ExampleComponent() {
 
   
 const vivek =useCallback(() => {
-    console.log("Button clicked");
-    console.log(count)
+    //console.log("Button clicked");
+    //console.log(count)
 
     
   }, [count]);
@@ -21,17 +21,20 @@ const vivek =useCallback(() => {
 
 
   useEffect(() => {
-   vivek()
+   vivek();
+
+    console.log("hello i am useCallback"+  first)
   }, [count])
   
 
   return (
     <div>
-      <h1>Count: {count}</h1>
+      <h1>Count: {count}--{first}</h1>
       <h1>Count Second: {first}</h1>
-      <button onClick={() => setCount(count + 1)}>Increment Count</button>
-      <button onClick={() => setfirst(first + 1)}> Count</button>
-      
+      <button onClick={() => setCount(count + 1)}> Count{count}</button>
+      <button onClick={() => setfirst(first + 1)}> first{first}</button>
+      {/* {console.log(count)}
+      {console.log(first)} */}
     </div>
   );
 }
